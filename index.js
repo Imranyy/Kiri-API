@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}));
 app.use('/api',require('./route/api'));
 
 //connecting to mongodb
-mongoose.connect(process.env.LOCALURI,{
+mongoose.connect(process.env.DATABASE,{
     useUnifiedTopology:true,
     useNewUrlParser:true
 }).then(()=>{
