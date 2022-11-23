@@ -58,7 +58,7 @@ const getOneBlog=async(req,res)=>{
 const postNewBlog=async(req,res)=>{
     try {
         const {photo,title,body,author}=req.body;
-        const newBlog=await Blog.create({pic,title,body,author})
+        const newBlog=await Blog.create({photo,title,body,author})
         res.status(200).send(newBlog);
         
     } catch (error) {
