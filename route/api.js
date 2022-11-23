@@ -9,12 +9,12 @@ const{
 
 //get all blogs
 router.get('/',getAllBlogs);
-//get single blog
-router.get('/:id',getOneBlog);
 
 //add a new blog
 router.post('/',postNewBlog);
 //send email
 router.post('/send',sendEmail)
+//get single blog
+router.get('/:id',getOneBlog);
 
 module.exports=router;

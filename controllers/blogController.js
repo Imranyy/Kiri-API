@@ -18,12 +18,12 @@ const sendEmail=async(req,res)=>{
         let mailTranporter=nodemailer.createTransport({
             service:'gmail',
             auth:{
-                user:process.env.EMAIL,
+                user:process.env.TRANSPORTER,
                 pass:process.env.PASSWORD
             }
         });
         let details={
-            from:process.env.EMAIL,
+            from:process.env.TRANSPORTER,
             to:process.env.RECEIVEREMAIL,//receiver
             subject:`Message sent from Kiri Webite`,
             text:`Name: ${name}
